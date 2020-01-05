@@ -3,15 +3,12 @@ import express from 'express'
 const router = express.Router();
 
 //미결함 조회
-router.get('/:keyword', async (req, res) => {
+router.get('/:id', async (req, res) => {
     const {
-        keyword
+        id
     } = req.params;
-    const {
-        srchTarget
-    } = req.query;
 
-    console.log('srchTarget > ',keyword, srchTarget);   
+    console.log('req.params : id > ',id);   
     // <BookListItem thumbnailURL={data.thumbnailURL} title={data.title} author={data.author} publisher={data.publisher} publishYear={data.publishYear}/>
 /*
     STATUS
