@@ -1,6 +1,9 @@
 /* EXPRESS SERVER */
 import express from 'express'
 import bodyParser from 'body-parser'
+/* ROUTER */
+import api from './routes'
+
 
 /* SERVER */
 const app = express();
@@ -14,9 +17,6 @@ app.use(bodyParser.urlencoded({
 app.use(express.static('public'))
 app.use('/api', api);
 
-
-/* ROUTER */
-import api from './routes'
 
 app.listen(PORT, (req, res) => {
     console.log(`http://127.0.0.1:${PORT} start!`)
